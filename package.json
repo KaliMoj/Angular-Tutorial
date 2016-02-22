@@ -1,0 +1,11 @@
+{
+  "name": "user-task-list",
+  "version": "1.0.0",
+  "description": "UI for the tasks sample application",
+  "main": "userTasks.js",
+  "author": "Crystal Garcia",
+  "license": "ISC",
+  "dependencies": {
+      "express": "latest"
+  }
+}
