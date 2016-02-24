@@ -1,9 +1,11 @@
-var firstApp = angular.module('firstApp', []);
-firstApp.controller('FirstController', function($scope) {
-  $scope.first = 'Some';
-  $scope.last = 'One';
-  $scope.heading = 'Message: ';
-  $scope.updateMessage = function() {
-    $scope.message = 'Hello ' + $scope.first +' '+ $scope.last + '!';
-  };
-});
+var firstApp = angular.module('firstApp', []).controller('FirstController', FirstController);
+
+function FirstController() {
+    this.first = "Some";
+    this.last = "One";
+    this.heading = "Message: ";
+}
+
+FirstController.prototype.updateMessage = function() {
+    this.message = "Hello " + this.first + " " + this.last + "!";
+}

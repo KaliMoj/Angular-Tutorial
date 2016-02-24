@@ -4,13 +4,13 @@
     <title>First AngularJS App</title>
   </head>
   <body>
-    <div ng-controller="FirstController">
+    <div ng-controller="FirstController as helloWorld">
       <span>Name:</span>
-      <input type="text" ng-model="first">
-      <input type="text" ng-model="last">
-      <button ng-click='updateMessage()'>Message</button>
+      <input type="text" ng-model="helloWorld.first">
+      <input type="text" ng-model="helloWorld.last">
+      <button ng-click='helloWorld.updateMessage()'>Message</button>
       <hr>
-      {{heading + message}}
+      {{helloWorld.heading + helloWorld.message}}
     </div>
     <script src="/js/angular.min.js"></script>
     <script src="/js/first.js"></script>
