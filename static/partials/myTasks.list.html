@@ -1,4 +1,5 @@
 <h3>List of User Tasks</h3>
-<ul>
-  <li ng-repeat="task in tasks">{{ task }}</li>
+<ul ng-hide="user.tasks.length == 0">
+  <li ng-repeat="task in user.tasks">{{ task }}</li>
 </ul>
+<label ng-hide="user.tasks.length > 0">No tasks saved.</label>

@@ -1,0 +1,9 @@
+<h1>My Tasks</h1>
+<hr/>
+<div ng-controller="userController as user">
+    <label>Hello {{user.firstName}} {{user.lastName}}!</label>
+    <br>
+    <section ui-view></section>
+    <label>Description: </label><input type="text" ng-model="user.newDescription"/>
+    <button ng-click="user.addTask(user.newDescription)">Add Task</button>
+</div>
